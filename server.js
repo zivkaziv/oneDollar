@@ -13,6 +13,7 @@ dotenv.load();
 
 // Controllers
 var contactController = require('./controllers/contact');
+var paymentController = require('./controllers/payment');
 
 var app = express();
 
@@ -32,6 +33,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/contact', contactController.contactPost);
+app.get('/paid', paymentController.paidGet);
 
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'app', 'index.html'));
