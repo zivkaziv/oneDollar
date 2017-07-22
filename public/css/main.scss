@@ -258,4 +258,18 @@ textarea {
   height: 100%;
   width: 100%;
   color: white;
+  overflow: auto;
+}
+
+@media (max-width: 600px) {
+  .main-container .title-container{
+    margin:0 5% !important;
+  }
+  .main-container h1 {
+    font-size: 30px !important;
+  }
+
+  .main-container img {
+    height: 110px !important;
+  }
 }
