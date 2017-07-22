@@ -11,7 +11,11 @@ var schemaOptions = {
 };
 
 var PaymentsSchema = new mongoose.Schema({
-    paypal_token: String
+    paymentToken: String,
+    payerID: String,
+    paymentID: String,
+    returnUrl: String,
+    instant: String,
 }, schemaOptions);
 
 var Payment = mongoose.model('Payments', PaymentsSchema);

@@ -35,7 +35,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/contact', contactController.contactPost);
-app.get('/paid', paymentController.paidGet);
+app.post('/paid', paymentController.paidPost);
 app.post('/paypal/webhook', paypalController.paypalWebhookPost);
 
 app.get('/', function(req, res) {
