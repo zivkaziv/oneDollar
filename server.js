@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 var dotenv = require('dotenv');
 var mongoose = require('mongoose');
+var paypal = require('paypal-rest-sdk');
 
 // Load environment variables from .env file
 dotenv.load();
@@ -14,6 +15,7 @@ dotenv.load();
 // Controllers
 var contactController = require('./controllers/contact');
 var paymentController = require('./controllers/payment');
+var paypalController = require('./controllers/paypal');
 
 var app = express();
 
@@ -34,6 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/contact', contactController.contactPost);
 app.get('/paid', paymentController.paidGet);
+app.post('/paypal/webhook', paypalController.paypalWebhookPost);
 
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'app', 'index.html'));
@@ -50,6 +53,13 @@ if (app.get('env') === 'production') {
     res.sendStatus(err.status || 500);
   });
 }
+
+var paypalMode = app.get('env') === 'production' ?'live':'sandbox';
+paypal.configure({
+    mode: paypalMode, // Sandbox or live
+    client_id: process.env.PAYPAL_CLIENT_ID ,
+    client_secret: process.env.PAYPAL_SECRET});
+
 
 app.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));

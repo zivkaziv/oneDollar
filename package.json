@@ -31,6 +31,7 @@
     "mongoose": "^4.4.8",
     "morgan": "^1.7.0",
     "nodemailer": "^2.3.0",
+    "paypal-rest-sdk": "^1.7.1",
     "vinyl-buffer": "^1.0.0",
     "yargs": "^4.3.2"
   },
