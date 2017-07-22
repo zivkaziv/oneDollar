@@ -1,4 +1,4 @@
-angular.module('MyApp', ['ngRoute'])
+angular.module('MyApp', ['ngRoute','paypal-button'])
   .config(function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
 
