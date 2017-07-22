@@ -31,6 +31,15 @@ angular.module('MyApp')
         };
 
         $scope.paymentCompleted = function(data) {
+            if(!data){
+                data ={
+                    paymentToken: 'EC-78G0183212429403N',
+                    payerID: 'ZLWWWAGVFBLW6',
+                    paymentID: 'PAY-06T46904U5212710NLFZ5C7Y',
+                    intent: 'sale',
+                    returnUrl: 'https://www.sandbox.paypal.com/?paymentId=PAY-06T46904U5212710NLFZ5C7Y&token=EC-78G0183212429403N&PayerID=ZLWWWAGVFBLW6' }
+
+            }
             $http.post('paid',{'paypal':data}).then(function(response){
                 $scope.paid = response.data.paid;
             });
