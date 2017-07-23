@@ -1,4 +1,4 @@
-angular.module('MyApp', ['ngRoute','paypal-button'])
+angular.module('MyApp', ['ngRoute','paypal-button','720kb.socialshare'])
   .config(function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
 
