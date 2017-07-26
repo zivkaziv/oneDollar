@@ -4,6 +4,7 @@ angular.module('MyApp')
         $scope.paid = -1;
         $scope.opts = {
             env: 'production',
+            locale: 'en_US',
             client: {
                 sandbox:    'AR0is7d9puDI-dhdTTr-SNIIKIB7b34OdCMocd6jw8fjR4U9M3rdB9eQPca4XwsF4Pq0fHROmwZOEIz2',
                 production: 'AWko3FYYPbdgAPjyKMwGD0N8jtZHyjzQ6MRiHikvZjCrfEX_Upkvg8cGbTjX8Xz7YpQ8g52fzZGa4x6-'
