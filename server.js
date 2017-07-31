@@ -41,6 +41,10 @@ app.post('/paypal/webhook', paypalController.paypalWebhookPost);
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'app', 'index.html'));
 });
+app.get('/google07e35dffe44bc5f7.html', function(req, res) {
+    res.sendFile(path.join(__dirname, 'app', 'google07e35dffe44bc5f7.html'));
+});
+
 
 app.get('*', function(req, res) {
   res.redirect('/#' + req.originalUrl);
