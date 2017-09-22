@@ -253,11 +253,13 @@ textarea {
 
 
 .main-container{
-  background-image: url('/img/background.png');
+  //background-image: url('/img/background.png');
+  background-image: url('/img/light_background.jpg');
   position: fixed;
   height: 100%;
   width: 100%;
-  color: white;
+  //color: white;
+  color: black;
   overflow: auto;
 }
 
@@ -271,5 +273,14 @@ textarea {
 
   .main-container img {
     height: 110px !important;
+  }
+
+
+}
+
+@media (max-width: 400px) {
+  .main-container .title-question{
+    margin-top: 30px !important;
+    font-size: 20px !important;
   }
 }

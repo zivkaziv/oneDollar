@@ -1,16 +1,19 @@
 <div class="container-fluid main-container" ng-controller="HomeCtrl" >
-  <div class="title-container" style="margin:0 20% ;text-align: center;margin-top: 50px;">
-    <div>
-      <h1 style="font-size: 45px">Aren't you curious to know how many people paid $1 to see how many people paid $1?</h1>
+  <div class="title-container" style="margin:0 20% ;text-align: center;margin-top: 15px;">
+    <div class="title-question">
+      <div style="font-size: 35px;">How many people paid <b>$1</b><br/>
+        To see how many people paid  <b>$1</b>
+      </div>
     </div>
 
     <div>
-      <img ng-hide="paid > 0" style="height: 150px; margin-top: 20px" src="http://www.strongestinworld.com/wp-content/uploads/2015/02/1-USD-e1424865623157.png">
+      <!--<img ng-hide="paid > 0" style="height: 110px; margin-top: 20px" src="http://www.strongestinworld.com/wp-content/uploads/2015/02/1-USD-e1424865623157.png">-->
+      <img ng-hide="paid > 0" style="height: 110px; margin-top: 20px" src="img/question_mark.png">
       <h1 style="margin-top: 90px;" ng-show="paid > 0">{{paid}}</br></br></br> People paid like you.. </br> Thank you</h1>
     </div>
 
     <div ng-hide="paid > 0">
-      <h2 style="margin-top: 30px">You are one click from finding out</h2>
+      <h2 style="margin-top: 30px">Find out now</h2>
     </div>
     <div ng-hide="paid > 0" style="height: 50px; margin-top: 20px">
       <paypal-button
@@ -23,9 +26,14 @@
       </paypal-button>
       <!--<img style="height: 50px; margin-top: 20px" src="https://www.josh.biz/wp-content/uploads/2012/12/paypal-pay-now.png">-->
     </div>
-
-    <div style="margin-top: 30px">
-      <p>For any question email me: howmany@peoplepaiddollar.com</p>
+    <div style="margin-top: 20px">
+      <p><b>50% of the money will be donate to</b></p>
+      <a href="http://www.feedthechildren.org/" target="_blank">
+        <img style="height: 90px !important;" src="img/donation.png">
+      </a>
+    </div>
+    <div style="margin-top: 40px">
+      <p>For any question email me: <b>howmany@peoplepaiddollar.com</b></p>
     </div>
     <div style="margin-top: 15px; margin-bottom: 40px">
       <button class="btn btn-medium font-bold"
