@@ -278,8 +278,12 @@ textarea {
 
 }
 
+.main-container .title-container .title-question{
+  font-size: 35px;
+}
+
 @media (max-width: 400px) {
-  .main-container .title-question{
+  .main-container .title-container .title-question{
     margin-top: 30px !important;
     font-size: 20px !important;
   }
