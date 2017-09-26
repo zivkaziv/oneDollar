@@ -4,7 +4,7 @@ angular.module('MyApp', ['ngRoute','paypal-button','720kb.socialshare'])
 
     $routeProvider
       .when('/', {
-        templateUrl: 'partials/home.html'
+        templateUrl: 'partials/homev1.html'
       })
       .otherwise({
         templateUrl: 'partials/404.html'
