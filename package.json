@@ -30,7 +30,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.3",
     "mongoose": "^5.7.5",
-    "morgan": "^1.7.0",
+    "morgan": "^1.9.1",
     "nodemailer": "^2.3.0",
     "paypal-rest-sdk": "^1.7.1",
     "vinyl-buffer": "^1.0.0",
