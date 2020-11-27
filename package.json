@@ -34,7 +34,9 @@
     "nodemailer": "^2.3.0",
     "paypal-rest-sdk": "^1.7.1",
     "vinyl-buffer": "^1.0.0",
-    "yargs": "^4.3.2"
+    "yargs": "^4.3.2",
+    "cloneable-readable":"^2.0.1",
+    "clone-buffer":"1.0.0"
   },
   "devDependencies": {},
   "engines": {
