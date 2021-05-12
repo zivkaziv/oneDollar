@@ -31,7 +31,7 @@
     "gulp-uglify": "^1.5.3",
     "mongoose": "^5.7.5",
     "morgan": "^1.9.1",
-    "nodemailer": "^2.3.0",
+    "nodemailer": "^6.4.16",
     "paypal-rest-sdk": "^1.7.1",
     "vinyl-buffer": "^1.0.0",
     "yargs": "^4.3.2",
